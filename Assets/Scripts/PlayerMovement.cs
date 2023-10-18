@@ -46,6 +46,12 @@ public class PlayerMovement : MonoBehaviour
     {
         // calculate movement direction
         moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
+
+        // Normalize the direction vector to ensure consistent speed in all directions
+        //moveDirection.Normalize();
+
+        // Move the player based on the direction and moveSpeed
+        //rb.velocity = moveDirection * moveSpeed;
     }
 
     private void SpeedControl()

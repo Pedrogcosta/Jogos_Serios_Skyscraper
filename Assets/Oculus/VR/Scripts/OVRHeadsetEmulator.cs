@@ -34,6 +34,7 @@ public class OVRHeadsetEmulator : MonoBehaviour
     public OpMode opMode = OpMode.EditorOnly;
     public bool resetHmdPoseOnRelease = true;
     public bool resetHmdPoseByMiddleMouseButton = true;
+    private Transform elevatorTransform; 
 
     public KeyCode[] activateKeys = new KeyCode[] { KeyCode.LeftControl, KeyCode.RightControl };
 
@@ -61,6 +62,7 @@ public class OVRHeadsetEmulator : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        elevatorTransform = GameObject.Find("Elevator").transform;
     }
 
     // Update is called once per frame
@@ -86,6 +88,17 @@ public class OVRHeadsetEmulator : MonoBehaviour
         bool emulationActivated = IsEmulationActivated();
         if (emulationActivated)
         {
+            // Verifique a posição da câmera
+            Vector3 elevatorPosition = elevatorTransform.position;        
+
+            // Verifique se a câmera está dentro da área especificada
+            if (transform.position.x <= -712f && transform.position.x >= -714f && transform.position.z >= 515f && transform.position.y <= 517f)
+            {
+                // A câmera está dentro da área, mova o elevador para cima
+                if(elevatorPosition.y<82){
+                    transform.Translate(Vector3.up * moveSpeed * Time.deltaTime);
+                }
+            }
             if (Input.GetKey(KeyCode.W))
             {
                 // Mova a câmera para frente (positivo no eixo Z)
