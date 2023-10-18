@@ -38,6 +38,7 @@ public class OVRHeadsetEmulator : MonoBehaviour
     public KeyCode[] activateKeys = new KeyCode[] { KeyCode.LeftControl, KeyCode.RightControl };
 
     public KeyCode[] pitchKeys = new KeyCode[] { KeyCode.LeftAlt, KeyCode.RightAlt };
+    public float moveSpeed = 3.0f;
 
     OVRManager manager;
 
@@ -85,6 +86,27 @@ public class OVRHeadsetEmulator : MonoBehaviour
         bool emulationActivated = IsEmulationActivated();
         if (emulationActivated)
         {
+            if (Input.GetKey(KeyCode.W))
+            {
+                // Mova a câmera para frente (positivo no eixo Z)
+                transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
+            }
+            if (Input.GetKey(KeyCode.S))
+            {
+                // Mova a câmera para trás (negativo no eixo Z)
+                transform.Translate(Vector3.back * moveSpeed * Time.deltaTime);
+            }
+            if (Input.GetKey(KeyCode.A))
+            {
+                // Mova a câmera para a esquerda (negativo no eixo X)
+                transform.Translate(Vector3.left * moveSpeed * Time.deltaTime);
+            }
+            if (Input.GetKey(KeyCode.D))
+            {
+                // Mova a câmera para a direita (positivo no eixo X)
+                transform.Translate(Vector3.right * moveSpeed * Time.deltaTime);
+            }
+
             if (!lastFrameEmulationActivated)
             {
                 previousCursorLockMode = Cursor.lockState;
