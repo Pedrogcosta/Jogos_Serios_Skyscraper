@@ -97,7 +97,7 @@ public class OVRHeadsetEmulator : MonoBehaviour
             if (Input.GetKey(KeyCode.X))
             {
                 // A câmera está dentro da área, mova o elevador para cima
-                if(elevatorPosition.y<35){
+                if(elevatorPosition.y<34.4){
                     transform.Translate(Vector3.up * moveSpeed * Time.deltaTime);
                 }
             }

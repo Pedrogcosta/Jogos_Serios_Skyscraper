@@ -32,18 +32,10 @@ public class Elevator : MonoBehaviour
         float distanciaBotao = Vector3.Distance(botao.transform.position, cameraPosition);
         if (Input.GetKey(KeyCode.X))
             {
-                    if(transform.position.y<35){
+                    if(transform.position.y<34.4){
                         transform.Translate(Vector3.up * elevatorSpeed * Time.deltaTime);
                         //cameraTransform.Translate(Vector3.up * elevatorSpeed * Time.deltaTime);
                     }
-            }
-        //se o player esta dentro do elevaor e a porta ja fechou
-        //if(distanciaBotao <= 1.1f && botao.transform.position.x < cameraPosition.x){
-        //    if(transform.position.y<82){
-                //transform.Translate(Vector3.up * elevatorSpeed * Time.deltaTime);
-                //cameraTransform.Translate(Vector3.up * elevatorSpeed * Time.deltaTime);
-            //}
-        //}
-
+            }        
     }
 }

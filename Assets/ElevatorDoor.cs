@@ -25,16 +25,26 @@ public class ElevatorDoor : MonoBehaviour
         if(distancia <= 5){
             
             if(distanciaBotao <= 1.1f && botao.transform.position.x < cameraPosition.x){
-                //fecha a porta quando o player entra
-                if(transform.localPosition.z > 0.7068099){
-                    print("fechando a porta");
-                    transform.localPosition = new Vector3(0.04f, 0.12f, transform.localPosition.z - (doorSpeed * Time.deltaTime));
+                
+                if(transform.position.y<34.4){
+                    //fecha a porta quando o player entra
+                    if(transform.localPosition.z > 0.7068099){
+                        print("fechando a porta");
+                        transform.localPosition = new Vector3(transform.localPosition.x, transform.localPosition.y, transform.localPosition.z - (doorSpeed * Time.deltaTime));
+                    }
                 }
+                else{
+                   //abre a porta quando o elevador termina de subir
+                if(transform.localPosition.z < 2.7068099f){
+                    transform.localPosition = new Vector3(transform.localPosition.x, transform.localPosition.y, transform.localPosition.z + (doorSpeed * Time.deltaTime));
+                } 
+                }
+                
             }
             else{
                 //abre a porta quando o player chega perto
                 if(transform.localPosition.z < 2.7068099f){
-                    transform.localPosition = new Vector3(0.04f, 0.12f, transform.localPosition.z + (doorSpeed * Time.deltaTime));
+                    transform.localPosition = new Vector3(transform.localPosition.x, transform.localPosition.y, transform.localPosition.z + (doorSpeed * Time.deltaTime));
                 }
             }
         }
