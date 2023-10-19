@@ -20,13 +20,13 @@ public class Elevator : MonoBehaviour
         Vector3 cameraPosition = cameraTransform.position;        
 
         // Verifique se a câmera está dentro da área especificada
-        if (cameraPosition.x <= -712f && cameraPosition.x >= -714f && cameraPosition.z >= 515f && cameraPosition.y <= 517f)
-        {
+        //if (cameraPosition.x <= -712f && cameraPosition.x >= -714f && cameraPosition.z >= 515f && cameraPosition.y <= 517f)
+        //{
             // A câmera está dentro da área, mova o elevador para cima
-            if(transform.position.y<82){
-                transform.Translate(Vector3.up * elevatorSpeed * Time.deltaTime);
-                cameraTransform.Translate(Vector3.up * elevatorSpeed * Time.deltaTime);
-            }
-        }
+        //    if(transform.position.y<82){
+        //        transform.Translate(Vector3.up * elevatorSpeed * Time.deltaTime);
+                //cameraTransform.Translate(Vector3.up * elevatorSpeed * Time.deltaTime);
+        //    }
+        //}
     }
 }

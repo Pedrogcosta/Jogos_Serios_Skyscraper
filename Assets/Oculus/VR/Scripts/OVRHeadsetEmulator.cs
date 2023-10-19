@@ -92,13 +92,13 @@ public class OVRHeadsetEmulator : MonoBehaviour
             Vector3 elevatorPosition = elevatorTransform.position;        
 
             // Verifique se a câmera está dentro da área especificada
-            if (transform.position.x <= -712f && transform.position.x >= -714f && transform.position.z >= 515f && transform.position.y <= 517f)
-            {
+            //if (transform.position.x <= -712f && transform.position.x >= -714f && transform.position.z >= 515f && transform.position.y <= 517f)
+            //{
                 // A câmera está dentro da área, mova o elevador para cima
-                if(elevatorPosition.y<82){
-                    transform.Translate(Vector3.up * moveSpeed * Time.deltaTime);
-                }
-            }
+            //    if(elevatorPosition.y<82){
+            //        transform.Translate(Vector3.up * moveSpeed * Time.deltaTime);
+            //    }
+            //}
             if (Input.GetKey(KeyCode.W))
             {
                 // Mova a câmera para frente (positivo no eixo Z)
