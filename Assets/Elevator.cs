@@ -4,29 +4,46 @@ using UnityEngine;
 
 public class Elevator : MonoBehaviour
 {
-    public float elevatorSpeed = 3.0f; // Velocidade do elevador
-    private Transform cameraTransform; // Referência à transformação da câmera
+    public float elevatorSpeed = 3.0f;
+    private Transform cameraTransform;
+    public GameObject player;
+    public GameObject botao;
+    Collider playerCollider;
+    Collider elevatorCollider;
+    private bool playerInsideElevator = false;
+    public GameObject porta;
+
     // Start is called before the first frame update
     void Start()
     {
-        // Encontre a câmera na cena. Certifique-se de que a câmera tenha um "tag" apropriado no Unity.
         cameraTransform = GameObject.FindGameObjectWithTag("MainCamera").transform;
+        player = GameObject.Find("Player");
+        playerCollider = player.GetComponent<Collider>();
+        elevatorCollider = GetComponent<Collider>();
+        botao = GameObject.Find("speaker grill");
+        porta = GameObject.Find("Door");
     }
 
     // Update is called once per frame
     void Update()
     {
         // Verifique a posição da câmera
-        Vector3 cameraPosition = cameraTransform.position;        
-
-        // Verifique se a câmera está dentro da área especificada
-        //if (cameraPosition.x <= -712f && cameraPosition.x >= -714f && cameraPosition.z >= 515f && cameraPosition.y <= 517f)
-        //{
-            // A câmera está dentro da área, mova o elevador para cima
+        Vector3 cameraPosition = cameraTransform.position;
+        float distanciaBotao = Vector3.Distance(botao.transform.position, cameraPosition);
+        if (Input.GetKey(KeyCode.X))
+            {
+                    if(transform.position.y<35){
+                        transform.Translate(Vector3.up * elevatorSpeed * Time.deltaTime);
+                        //cameraTransform.Translate(Vector3.up * elevatorSpeed * Time.deltaTime);
+                    }
+            }
+        //se o player esta dentro do elevaor e a porta ja fechou
+        //if(distanciaBotao <= 1.1f && botao.transform.position.x < cameraPosition.x){
         //    if(transform.position.y<82){
-        //        transform.Translate(Vector3.up * elevatorSpeed * Time.deltaTime);
+                //transform.Translate(Vector3.up * elevatorSpeed * Time.deltaTime);
                 //cameraTransform.Translate(Vector3.up * elevatorSpeed * Time.deltaTime);
-        //    }
+            //}
         //}
+
     }
 }

@@ -35,6 +35,7 @@ public class OVRHeadsetEmulator : MonoBehaviour
     public bool resetHmdPoseOnRelease = true;
     public bool resetHmdPoseByMiddleMouseButton = true;
     private Transform elevatorTransform; 
+    private Transform playerTransform; 
 
     public KeyCode[] activateKeys = new KeyCode[] { KeyCode.LeftControl, KeyCode.RightControl };
 
@@ -63,6 +64,7 @@ public class OVRHeadsetEmulator : MonoBehaviour
     void Start()
     {
         elevatorTransform = GameObject.Find("Elevator").transform;
+        playerTransform = GameObject.Find("Player").transform;
     }
 
     // Update is called once per frame
@@ -92,32 +94,36 @@ public class OVRHeadsetEmulator : MonoBehaviour
             Vector3 elevatorPosition = elevatorTransform.position;        
 
             // Verifique se a câmera está dentro da área especificada
-            //if (transform.position.x <= -712f && transform.position.x >= -714f && transform.position.z >= 515f && transform.position.y <= 517f)
-            //{
+            if (Input.GetKey(KeyCode.X))
+            {
                 // A câmera está dentro da área, mova o elevador para cima
-            //    if(elevatorPosition.y<82){
-            //        transform.Translate(Vector3.up * moveSpeed * Time.deltaTime);
-            //    }
-            //}
+                if(elevatorPosition.y<35){
+                    transform.Translate(Vector3.up * moveSpeed * Time.deltaTime);
+                }
+            }
             if (Input.GetKey(KeyCode.W))
             {
                 // Mova a câmera para frente (positivo no eixo Z)
                 transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
+                playerTransform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
             }
             if (Input.GetKey(KeyCode.S))
             {
                 // Mova a câmera para trás (negativo no eixo Z)
                 transform.Translate(Vector3.back * moveSpeed * Time.deltaTime);
+                playerTransform.Translate(Vector3.back * moveSpeed * Time.deltaTime);
             }
             if (Input.GetKey(KeyCode.A))
             {
                 // Mova a câmera para a esquerda (negativo no eixo X)
                 transform.Translate(Vector3.left * moveSpeed * Time.deltaTime);
+                playerTransform.Translate(Vector3.left * moveSpeed * Time.deltaTime);
             }
             if (Input.GetKey(KeyCode.D))
             {
                 // Mova a câmera para a direita (positivo no eixo X)
                 transform.Translate(Vector3.right * moveSpeed * Time.deltaTime);
+                playerTransform.Translate(Vector3.right * moveSpeed * Time.deltaTime);
             }
 
             if (!lastFrameEmulationActivated)
