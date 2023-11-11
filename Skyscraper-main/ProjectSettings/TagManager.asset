@@ -5,6 +5,24 @@ TagManager:
   serializedVersion: 2
   tags:
   - XROrigin
+  - anchor1
+  - anchor2
+  - anchor3
+  - anchor4
+  - anchor5
+  - anchor6
+  - anchor7
+  - anchor8
+  - anchor9
+  - anchor10
+  - anchor11
+  - anchor12
+  - anchor13
+  - anchor14
+  - anchor15
+  - anchor16
+  - anchor17
+  - anchor18
   layers:
   - Default
   - TransparentFX
