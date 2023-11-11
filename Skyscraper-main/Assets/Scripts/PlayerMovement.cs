@@ -8,6 +8,8 @@ public class PlayerMovement : MonoBehaviour
     private Transform cameraTransform;
     private Transform originTransform;
     private Transform playerTransform;
+    private Canvas initialCanvas;
+    private Canvas instructionsCanvas;
 
     [HideInInspector] public float walkSpeed;
     [HideInInspector] public float sprintSpeed;
@@ -26,6 +28,8 @@ public class PlayerMovement : MonoBehaviour
         cameraTransform = GameObject.FindGameObjectWithTag("MainCamera").transform;
         originTransform = GameObject.FindGameObjectWithTag("XROrigin").transform;
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
+        initialCanvas = GameObject.Find("MenuInicial").GetComponent<Canvas>();
+        instructionsCanvas = GameObject.Find("Instrucoes").GetComponent<Canvas>();
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
     }
@@ -41,6 +45,19 @@ public class PlayerMovement : MonoBehaviour
         originTransform.position = spawn;
         playerTransform.position = spawn;
     }
+
+    public void renderInstructions(){
+        initialCanvas.enabled = !initialCanvas.enabled;
+        instructionsCanvas.enabled = !instructionsCanvas.enabled;
+    }
+
+    public void killSimulation(){
+        Application.Quit();
+        #if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+        #endif
+    }
+
     /*
     private void FixedUpdate()
     {
