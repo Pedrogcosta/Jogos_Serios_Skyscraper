@@ -6918,9 +6918,9 @@ MonoBehaviour:
     um elevador. Para se mover use os c\xEDrculos de teleporte no ch\xE3o. Voc\xEA
     pode se teleportar apontando o controle para o c\xEDrculo e clicando com o dedo
     indicador. O objetivo dessa simula\xE7\xE3o \xE9 entrar no elevador, para subir
-    basta apontar o controle para o bot\xE3o e apertar com o dedo. Ao chegar no topo
-    do pr\xE9dio voc\xEA deve atravessar a ponte, passando para o pr\xE9dio em frente.
-    Boa sorte!"
+    basta apontar o controle para o bot\xE3o e apertar o bot\xE3o da frente do controle.
+    Ao chegar no topo do pr\xE9dio voc\xEA deve atravessar a ponte, passando para
+    o pr\xE9dio em frente. Boa sorte!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
