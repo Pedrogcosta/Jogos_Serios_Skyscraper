@@ -6,6 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed;
     private Transform cameraTransform;
+    private Transform originTransform;
     private Transform playerTransform;
 
     [HideInInspector] public float walkSpeed;
@@ -23,6 +24,7 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         cameraTransform = GameObject.FindGameObjectWithTag("MainCamera").transform;
+        originTransform = GameObject.FindGameObjectWithTag("XROrigin").transform;
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
@@ -31,6 +33,13 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         playerTransform.position = cameraTransform.position;
+    }
+    
+    public void teleportPlayer(){
+        Debug.Log("calling teleport player");
+        Vector3 spawn = new Vector3(-706.73999f, 10.3000002f, 520.190002f);
+        originTransform.position = spawn;
+        playerTransform.position = spawn;
     }
     /*
     private void FixedUpdate()
