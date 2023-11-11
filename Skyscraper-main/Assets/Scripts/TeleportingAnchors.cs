@@ -28,13 +28,15 @@ public class TeleportingAnchors : MonoBehaviour
         currTeleportationAnchor.gameObject.GetComponent<MeshRenderer>().enabled = false;
 
         try
-        {
-            string nextAnchor = "anchor" + (currAnchor + 1);
-            TeleportationAnchor nextTeleportationAnchor = GameObject.FindWithTag(nextAnchor).GetComponent<TeleportationAnchor>();
-            if (nextTeleportationAnchor)
-            {
-                nextTeleportationAnchor.enabled = true;
-                nextTeleportationAnchor.gameObject.GetComponent<MeshRenderer>().enabled = true;
+        {   
+            if(currAnchor+1 <= 18){
+                string nextAnchor = "anchor" + (currAnchor + 1);
+                TeleportationAnchor nextTeleportationAnchor = GameObject.FindWithTag(nextAnchor).GetComponent<TeleportationAnchor>();
+                if (nextTeleportationAnchor)
+                {
+                    nextTeleportationAnchor.enabled = true;
+                    nextTeleportationAnchor.gameObject.GetComponent<MeshRenderer>().enabled = true;
+                }
             }
         }
         catch (System.Exception e)
