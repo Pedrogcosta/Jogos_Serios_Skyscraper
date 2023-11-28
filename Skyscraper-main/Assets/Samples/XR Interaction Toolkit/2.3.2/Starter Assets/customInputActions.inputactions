@@ -1,0 +1,34 @@
+{
+    "name": "customInputActions",
+    "maps": [
+        {
+            "name": "Menu",
+            "id": "19805d96-6e2b-4d4d-a4d0-f97107dc6fa9",
+            "actions": [
+                {
+                    "name": "MenuPress",
+                    "type": "Button",
+                    "id": "5f18054d-a6e9-40e4-9ad8-25ffe4567572",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "33d7faa5-a14b-4ceb-863f-45849c852a92",
+                    "path": "<XRSimulatedController>/gripButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MenuPress",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
