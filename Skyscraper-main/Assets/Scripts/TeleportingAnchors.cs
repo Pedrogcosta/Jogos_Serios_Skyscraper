@@ -7,11 +7,14 @@ public class TeleportingAnchors : MonoBehaviour
 {
     int currAnchor = 0;
     TeleportationAnchor currTeleportationAnchor;
+    private Canvas finalCanvas;
 
     void Start()
     {
         currTeleportationAnchor = GetComponent<TeleportationAnchor>();
         currTeleportationAnchor.teleporting.AddListener(Teleporting);
+
+        finalCanvas = GameObject.Find("Menu Final").GetComponent<Canvas>();
 
         string tag = currTeleportationAnchor.gameObject.tag;
         int.TryParse(tag.Substring(6), out currAnchor);
@@ -29,6 +32,9 @@ public class TeleportingAnchors : MonoBehaviour
 
         try
         {   
+            if(currAnchor>= 18){
+                finalCanvas.enabled = !finalCanvas.enabled;
+            }
             if(currAnchor+1 <= 18){
                 string nextAnchor = "anchor" + (currAnchor + 1);
                 TeleportationAnchor nextTeleportationAnchor = GameObject.FindWithTag(nextAnchor).GetComponent<TeleportationAnchor>();

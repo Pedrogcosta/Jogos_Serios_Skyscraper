@@ -8,10 +8,9 @@ using UnityEngine.InputSystem;
 public class canvasPause : MonoBehaviour {
 
 
-    public GameObject painelMenu;
+    public Canvas menu;
     void Start() {
-
-         painelMenu.SetActive(false);
+        menu = GameObject.FindGameObjectWithTag("Panico").GetComponent<Canvas>();
     }
  
     void Update() {
@@ -31,13 +30,7 @@ public class canvasPause : MonoBehaviour {
  
     public void PausarJogo() {
         Debug.Log("pausar jogo");
-        if (Time.timeScale == 0) {
-            Time.timeScale = 1;
-            painelMenu.SetActive(true);
-        } else if (Time.timeScale == 1) {
-            painelMenu.SetActive(false);
-            Time.timeScale = 0;
-        }
+        menu.enabled = !menu.enabled;
     }
 
      void PrimaryButtonPressed()
