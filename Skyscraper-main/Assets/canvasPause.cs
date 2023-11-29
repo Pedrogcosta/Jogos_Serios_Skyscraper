@@ -15,7 +15,7 @@ public class canvasPause : MonoBehaviour {
     }
  
     void Update() {
-          Debug.Log(" fui chamado");
+          
 
 
 
@@ -29,7 +29,8 @@ public class canvasPause : MonoBehaviour {
 
     }
  
-    void PausarJogo() {
+    public void PausarJogo() {
+        Debug.Log("pausar jogo");
         if (Time.timeScale == 0) {
             Time.timeScale = 1;
             painelMenu.SetActive(true);

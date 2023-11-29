@@ -1116,7 +1116,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7aa604eebb1bec64d94c2eddbd462e91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  painelMenu: {fileID: 0}
+  painelMenu: {fileID: 216821071}
 --- !u!1 &237763861
 GameObject:
   m_ObjectHideFlags: 0
@@ -8511,7 +8511,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: c450958e3578da64692a6562753cd7c6, type: 3}
+  m_Actions: {fileID: -944628639613478452, guid: 8012ed9fc833afb4fb3cba8b398ee638, type: 3}
   m_NotificationBehavior: 2
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
@@ -8526,10 +8526,10 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PanicButton, Assembly-CSharp
-        m_MethodName: PanicButtonPress
-        m_Mode: 0
+      - m_Target: {fileID: 216821080}
+        m_TargetAssemblyTypeName: canvasPause, Assembly-CSharp
+        m_MethodName: PausarJogo
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -8538,11 +8538,11 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: 5f18054d-a6e9-40e4-9ad8-25ffe4567572
-    m_ActionName: Menu/MenuPress
+    m_ActionId: 7af00d05-13d0-4746-8f24-379baab75b46
+    m_ActionName: Default/Pause
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
-  m_DefaultActionMap: Menu
+  m_DefaultActionMap: Default
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
 --- !u!1 &1430059510
