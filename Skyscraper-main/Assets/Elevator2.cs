@@ -35,7 +35,7 @@ public class Elevator2 : MonoBehaviour
         float distanciaBotao = Vector3.Distance(botao.transform.position, cameraPosition);
         if ((Input.GetKey(KeyCode.X) || buttonPressed) && playerInsideElevator)
             {
-                if(transform.position.y<34.4){
+                if(transform.position.y<73){
                     transform.Translate(Vector3.up * elevatorSpeed * Time.deltaTime);
                     cameraTransform.Translate(Vector3.up * elevatorSpeed * Time.deltaTime);
                     player.transform.Translate(Vector3.up * elevatorSpeed * Time.deltaTime);

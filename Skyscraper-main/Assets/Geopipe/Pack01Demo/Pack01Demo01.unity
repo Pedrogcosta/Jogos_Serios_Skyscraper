@@ -3743,8 +3743,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Elevator, Assembly-CSharp
+      - m_Target: {fileID: 494420406}
+        m_TargetAssemblyTypeName: Elevator2, Assembly-CSharp
         m_MethodName: moveElevator
         m_Mode: 1
         m_Arguments:
@@ -9059,7 +9059,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1421839645}
   m_LocalRotation: {x: 0, y: -0.5158382, z: 0, w: 0.85668606}
-  m_LocalPosition: {x: -541.63, y: 10.3, z: 453.36}
+  m_LocalPosition: {x: -678.28, y: 39.34, z: 537.48}
   m_LocalScale: {x: 1, y: 1.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9126,7 +9126,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 11851af3cbb2ad24889fc11d94764afc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -672.18
+      value: -669.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 11851af3cbb2ad24889fc11d94764afc, type: 3}
       propertyPath: m_LocalPosition.y
@@ -9134,7 +9134,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 11851af3cbb2ad24889fc11d94764afc, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 519
+      value: 524.4
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 11851af3cbb2ad24889fc11d94764afc, type: 3}
       propertyPath: m_LocalRotation.w
@@ -9163,6 +9163,10 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 11851af3cbb2ad24889fc11d94764afc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8507091508074450711, guid: 11851af3cbb2ad24889fc11d94764afc, type: 3}
+      propertyPath: m_Name
+      value: speaker grill 2
       objectReference: {fileID: 0}
     - target: {fileID: -5752960467304349922, guid: 11851af3cbb2ad24889fc11d94764afc, type: 3}
       propertyPath: m_Name
