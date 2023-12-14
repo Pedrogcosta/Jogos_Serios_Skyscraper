@@ -29,7 +29,7 @@ public class ElevatorDoor2 : MonoBehaviour
                 if(transform.position.y<73){
                     //fecha a porta quando o player entra
                     //xr origin position: Vector3(-541.630005,10.3000002,453.359985)
-                    //elevator 2 position: Vector3(-672.179993,34.4900017,519)
+                    //elevator 2 position: Vector3(-670.169983,34.4900017,523.099976)
                     //altura maxima: 73.16
                     if(transform.localPosition.z < 0.7068099){
                         print("fechando a porta");
