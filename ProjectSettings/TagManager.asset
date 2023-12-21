@@ -1,0 +1,87 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - XROrigin
+  - anchor1
+  - anchor2
+  - anchor3
+  - anchor4
+  - anchor5
+  - anchor6
+  - anchor7
+  - anchor8
+  - anchor9
+  - anchor10
+  - anchor11
+  - anchor12
+  - anchor13
+  - anchor14
+  - anchor15
+  - anchor16
+  - anchor17
+  - anchor18
+  - Menu Final
+  - Panico
+  - anchor19
+  - anchor20
+  - anchor21
+  - anchor22
+  - anchor23
+  - anchor24
+  - anchor25
+  - anchor26
+  - anchor27
+  - anchor28
+  - anchor29
+  - anchor30
+  - anchor31
+  - anchor32
+  - anchor33
+  - anchor34
+  - anchor35
+  - anchor36
+  - anchor37
+  - anchor38
+  - anchor39
+  - anchor40
+  - anchor41
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
